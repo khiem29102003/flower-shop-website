@@ -1,0 +1,134 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  border-bottom: 1px solid #e5e7eb; /* subtle gray border */
+  background-color: rgba(255, 255, 255, 0.9); /* slightly transparent white */
+  padding: 1rem 0;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem; /* text-2xl */
+  font-weight: 700; /* font-bold */
+  letter-spacing: 0.05em; /* tracking-widest */
+  color: #5A6B5D; /* text-secondary */
+  text-decoration: none;
+}
+
+.navLinks {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navLinks {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.navLink {
+  position: relative;
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #1C1C1C; /* text-foreground */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #B98B82; /* bg-primary */
+  transition: width 0.3s ease;
+}
+
+.navLink:hover {
+  color: #B98B82; /* hover:text-primary */
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.navLinkActive {
+  color: #B98B82; /* text-primary */
+}
+
+.rightItems {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cartBadge {
+  position: relative;
+}
+
+.badge {
+  margin-left: 0.5rem; /* ml-2 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px; /* rounded-full */
+  background-color: #B98B82; /* bg-primary */
+  padding: 0.25rem 0.5rem; /* px-2 py-1 */
+  font-size: 0.75rem; /* text-xs */
+  font-weight: 700; /* font-bold */
+  line-height: 1; /* leading-none */
+  color: white;
+}
+
+.logoutButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* Inherit navLink styles */
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #1C1C1C;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logoutButton::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #B98B82;
+  transition: width 0.3s ease;
+}
+
+.logoutButton:hover {
+  color: #B98B82;
+}
+
+.logoutButton:hover::after {
+  width: 100%;
+}

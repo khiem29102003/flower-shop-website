@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  /* New Color Palette */
+  --background: #FBF8F3; /* Warm, creamy off-white */
+  --foreground: #1C1C1C; /* Soft, dark gray for text */
+  --primary: #B98B82;    /* Muted, earthy pink for accents */
+  --secondary: #5A6B5D;  /* Deep, natural green */
+  --subtle: #F5F5F5;      /* Light gray for borders/backgrounds */
+
+  /* Shadows & Borders */
+  --border-radius: 0.5rem; /* Slightly larger radius for a softer look */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.07);
+  --shadow-lg: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif; /* New default font */
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif; /* New heading font */
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+.btn-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--background) !important;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.card {
+  border: 1px solid var(--subtle);
+  box-shadow: none;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  background-color: var(--background);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.navbar.bg-light {
+  background-color: var(--background) !important;
+  box-shadow: var(--shadow-sm);
+}
